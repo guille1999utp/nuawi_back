@@ -14,5 +14,5 @@ app.use(require('./routes/index'));
 
 
 app.listen(PORT,()=>{
-    swaggerDocs(app);
+    swaggerDocs(app,PORT);
 });
