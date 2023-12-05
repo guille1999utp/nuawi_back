@@ -48,11 +48,9 @@ route.get('/task',getAllTasks);
  *         content:
  *           application/json:
  *             example:
- *               message: "Tarea agregada con éxito."
- *               task:
- *                 id: "3"
- *                 title: "Nueva tarea"
- *                 status: "pendiente"
+ *               id: "3"
+ *               title: "Nueva tarea"
+ *               status: "pendiente"
  *       400:
  *         description: Título requerido
  *         content:
@@ -88,11 +86,9 @@ route.post('/task', createTask);
  *         content:
  *           application/json:
  *             example:
- *               message: "Tarea actualizada con éxito."
- *               task:
- *                 id: "3"
- *                 title: "Tarea actualizada"
- *                 status: "hecho"
+ *               id: "3"
+ *               title: "Tarea actualizada"
+ *               status: "hecho"
  *       404:
  *         description: Tarea no encontrada
  *         content:
