@@ -8,7 +8,7 @@
     "routes": [
       {
         "src": "/api-docs/(.*)",
-        "dest": "/api-docs/index.js"  
+        "dest": "/swagger/swagger.js"  
       },
       {
         "src": "/(.*)",
