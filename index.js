@@ -1,16 +1,17 @@
 const express = require('express');
-const http = require('http');
 const cors = require('cors');
 const app = express();
-const server = http.createServer(app);
-app.set('port', 3000);
+
+const PORT = process.env.PORT || 3000;
+
 app.use(cors());
 app.use(express.json());
-
+const { swaggerDocs } = require('./swagger/swagger');
 //rutas
-app.use(require('./rutas/index'));
+app.use(require('./routes/index'));
 
 
-server.listen(app.get('port'),()=>{
-    console.log('escuchando en el puerto ', app.get('port'));
+
+app.listen(PORT,()=>{
+    swaggerDocs(app);
 });
